@@ -1,0 +1,65 @@
+/* =============
+    Section 1
+============= */
+#section-1{
+    
+    background-image: url("../img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    height: 695px;
+
+    @include lg {
+        height: 800px;
+    }
+
+    @include xl {
+        height: 960px;
+    }
+
+    #text {
+        text-align: center;
+
+        @include sm {
+            padding-top: 95px;
+        }
+    
+        @include md {
+            padding-top: 120px;
+        }
+    
+        @include lg {
+            padding-top: 130px;
+        }
+
+        h1 {
+            color: $darkblue;
+            // font-size: rem-calc(24);
+        }
+
+        h3 {
+            color: $blue;
+            // font-size: rem-calc(16);
+        }
+    }
+
+    #circlestart {
+        text-align: center;
+        color: $white;
+        display: grid;
+        grid-template-columns: auto 100px auto;
+        grid-template-areas: ". start .";
+        
+        
+        h1 {
+            // font-size: rem-calc(18);
+            border: 1px solid $white;
+            border-radius: 40px;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            grid-area: start;
+        }
+    }
+
+}

@@ -1,0 +1,65 @@
+/* =============
+    Section 3
+============= */
+
+#section-3 {
+    
+    h1 {
+        text-align: center;
+    }
+
+    #mockups {
+        display: grid;
+        // grid-template-columns: 10px auto 10px;
+        background-repeat: no-repeat;
+        grid-gap: 20px;
+        grid-template-areas: "panel-1" "panel-2" "panel-3";
+        
+        @include md {
+            grid-template-areas: "panel-1 panel-2" "panel-3";
+            margin-left: 60px;
+            margin-right: 60px;
+        }
+
+        @include lg {
+            display: grid;
+            grid-template-areas: "panel-1 panel-2 panel-3" "text-1 text-2 text-3";
+            // grid-template-columns: 120px auto 120px;
+            margin-left: 120px;
+            margin-right: 120px;
+        }
+
+        #panel-1 {
+            background-image: url("../img/signmockup.jpg");
+            grid-area: panel-1;
+            height: 200px;
+        }
+        
+        #text-1 {
+            background-color: $gray;
+            padding: 10px;
+        }
+
+        #panel-2 {
+            background-image: url("../img/bcardsmockup.jpg");
+            grid-area: panel-2;
+            height: 200px;
+        }
+
+        #text-2 {
+            background-color: $gray;
+            padding: 10px;
+        }
+
+        #panel-3 {
+            background-image: url("../img/realisticcardmockup.jpg");
+            grid-area: panel-3;
+            height: 200px;
+        }
+        
+        #text-3 {
+            background-color: $gray;
+            padding: 10px;
+        }
+    }
+}
