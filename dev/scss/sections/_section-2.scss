@@ -3,20 +3,25 @@
 ============= */
 
 #section-2 {
+    
     display: grid;
     background-color: $gray;
 
     @include md {
         display: grid;
-        grid-template-columns: 40% auto;
+        grid-template-columns: 66% auto;
         grid-template-areas: "article img";
     }
 
     @include lg {
-        grid-template-columns: 40% auto;
+        display: grid;
+        grid-template-columns: 50% auto;
         grid-template-areas: "img article";
-        grid-auto-columns: auto 1200px auto;
-        grid-area: article img;
+    }
+
+    @include xl {
+        display: grid;
+        margin-left: 120px;
     }
 
     article {
@@ -35,6 +40,21 @@
             margin-left: 130px;
             margin-right: 130px;
         }
+
+        h5 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 8px;
+
+            @include md {
+                text-align: left;
+            }
+
+            @include lg {
+                margin-top: 130px;
+                margin-bottom: 8px;
+            }
+        }
     }
 
     #image {
@@ -42,11 +62,6 @@
         background-image: url("../img/shoes.jpg");
         background-repeat: no-repeat;
         height: 320px;
-        width: 100%;
-
-        @include sm {
-            background-image: cover;
-        }
         
         @include md {
             height: 246px;

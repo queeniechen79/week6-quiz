@@ -19,6 +19,7 @@
 
     #text {
         text-align: center;
+        padding-top: 95px;
 
         @include sm {
             padding-top: 95px;
@@ -47,18 +48,22 @@
         text-align: center;
         color: $white;
         display: grid;
-        grid-template-columns: auto 100px auto;
+        // grid-template-columns: auto 100px auto;
         grid-template-areas: ". start .";
+        // grid-area: start;
         
-        
-        h1 {
-            // font-size: rem-calc(18);
-            border: 1px solid $white;
-            border-radius: 40px;
-            width: 80px;
-            height: 80px;
-            text-align: center;
+        #oval {
             grid-area: start;
+        }
+
+        h1 {
+            // border: 1px solid $white;
+            // border-radius: 40px;
+            // width: 80px;
+            // height: 80px;
+            // text-align: center;
+            grid-area: start;
+            padding-top: 16px;
         }
     }
 
